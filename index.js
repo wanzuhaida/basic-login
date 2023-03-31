@@ -41,9 +41,20 @@ function login(username, password){
         return "Username not found"
     }
 }
-
+function register (newusername, newpassword, newname, newemail) {
+    //TODO : CHECK IF USEERNAME EXIST
+    dbUsers.push({
+        username: newusername,
+        password: newpassword,
+        name: newname,
+        email: newemail
+    })
+}
 //try to login
 //login("wanzu","noh rokiah")
 //login("wanzu","12345")
 
 console.log(login("alif","Keping"))
+register("ana","anana","Anarusni","ana@utem.edu.my")
+
+console.log(login("ana","anana"))
